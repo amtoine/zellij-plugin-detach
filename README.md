@@ -2,9 +2,18 @@
 A plugin to detach a Zellij session
 
 ## installation
-from source, run
+first, you'll need to install the `wasm32-wasi` target to your `rustup` installation
 ```shell
-cargo install --path .
+rustup target add wasm32-wasi
+```
+once that's done and installed, you can
+- build the plugin
+```shell
+cargo build --target wasm32-wasi
+```
+- install the plugin from source with
+```shell
+cargo install --target wasm32-wasi --path .
 ```
 
 ## some ideas of usage
